@@ -1,0 +1,223 @@
+/* General Reset */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f8f9fa;
+    color: #222;
+}
+
+/* Header and Navigation */
+header {
+    background: #e9ecef;
+    border-bottom: 2px solid #ccc;
+}
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #bfc9d1;
+    padding: 0.5rem 1rem;
+}
+.nav-logo {
+    display: flex;
+    align-items: center;
+    margin-right: 2rem;
+}
+.logo {
+    height: 40px;
+    width: auto;
+    display: block;
+}
+nav ul {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background: none;
+}
+nav ul li {
+    margin-left: 2rem;
+}
+nav ul li:first-child {
+    margin-left: 0;
+}
+nav ul li a {
+    text-decoration: none;
+    color: #222;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+nav ul li a[aria-current="page"] {
+    color: #0a197d;
+    background: #fff;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    margin: 2rem 0 1rem 0;
+    background: #fff;
+    border: 1px solid #ccc;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hero-img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    opacity: 0.2;
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 1;
+}
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+.hero-content h1 {
+    color: #0a197d;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+.cta-btn {
+    background: #444;
+    color: #fff;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 1rem;
+    display: inline-block;
+}
+
+/* Features Section */
+.features {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 0;
+    gap: 1rem;
+}
+.feature-box {
+    background: #fff;
+    border: 1px solid #ccc;
+    flex: 1;
+    text-align: center;
+    padding: 1rem 0.5rem;
+    border-radius: 6px;
+}
+.feature-box img {
+    width: 100%;
+    max-width: 180px;
+    height: 120px;
+    object-fit: cover;
+    margin-bottom: 0.5rem;
+}
+.feature-box h3 {
+    margin: 0.5rem 0 0 0;
+    font-size: 1.1rem;
+}
+
+/* Main Bottom Section */
+.main-bottom {
+    margin: 2rem 0;
+}
+.main-bottom-wrapper {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+}
+.main-img {
+    flex: 2;
+    width: 100%;
+    max-width: 400px;
+    height: 220px;
+    object-fit: cover;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: #fff;
+}
+.newsletter {
+    flex: 1;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 1.5rem 1rem;
+    min-width: 220px;
+    box-sizing: border-box;
+}
+.newsletter h2 {
+    margin-top: 0;
+    color: #555;
+    font-size: 1.3rem;
+}
+.newsletter label {
+    display: block;
+    margin: 0.5rem 0 0.2rem 0;
+    font-size: 0.95rem;
+}
+.newsletter input {
+    width: 100%;
+    padding: 0.4rem;
+    margin-bottom: 0.7rem;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+.newsletter button {
+    width: 100%;
+    padding: 0.7rem;
+    background: #111;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 0.5rem;
+}
+
+/* Footer */
+footer {
+    margin-top: 2rem;
+    border-top: 2px solid #ccc;
+    text-align: center;
+    background: #bfc9d1;
+    padding: 1rem 0 0.5rem 0;
+    position: relative;
+}
+footer .social {
+    margin-top: 0.5rem;
+}
+footer .social a {
+    margin: 0 0.5rem;
+    display: inline-block;
+}
+footer .social img {
+    vertical-align: middle;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .features {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .main-bottom-wrapper {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .main-img {
+        max-width: 100%;
+        height: 180px;
+    }
+}

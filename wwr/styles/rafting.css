@@ -1,0 +1,171 @@
+/* CSS Variables */
+:root {
+  --primary-color: #0a197d;
+  --accent1-color: #444;
+  --accent2-color: #fff;
+  --body-font: 'Roboto', Arial, sans-serif;
+  --heading-font: 'Merriweather', serif;
+}
+
+/* Box Model Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+  font-family: var(--body-font);
+  color: var(--accent1-color);
+  background: #f8f9fa;
+}
+
+/* Page Width and Centering */
+header, main, footer {
+  width: 840px;
+  margin: 0 auto;
+}
+
+/* Header and Navigation */
+header {
+  background: #e9ecef;
+  border-bottom: 2px solid #ccc;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #bfc9d1;
+  padding: 0.5rem 1rem;
+}
+.nav-logo {
+  display: flex;
+  align-items: center;
+  margin-right: 2rem;
+}
+.logo {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+nav ul {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: none;
+}
+nav ul li {
+  margin-left: 2rem;
+}
+nav ul li:first-child {
+  margin-left: 0;
+}
+nav ul li a,
+nav a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+nav ul li a[aria-current="page"] {
+  color: #0a197d;
+  background: #fff;
+}
+
+/* Headings */
+h1, h2 {
+  font-family: var(--heading-font);
+  color: var(--primary-color);
+}
+
+/* Basic Spacing */
+nav, p, section, article {
+  margin: 16px;
+  padding: 8px;
+}
+
+/* Remove underline from social media image links */
+.social a,
+.socialmedia a {
+  text-decoration: none;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  margin-bottom: 32px;
+}
+.hero-img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.hero h1 {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  padding: 16px;
+  text-align: center;
+  opacity: 0.7;
+  background-color: var(--accent1-color);
+  color: #fff;
+  font-family: var(--heading-font);
+  font-size: 2rem;
+}
+.hero article {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  background: rgba(255,255,255,0.85);
+  margin: 0 32px;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.hero article img {
+  float: right;
+  width: 125px;
+  margin-left: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+
+/* Footer */
+footer {
+  margin-top: 2rem;
+  border-top: 2px solid #ccc;
+  text-align: center;
+  background: #bfc9d1;
+  padding: 1rem 0 0.5rem 0;
+  position: relative;
+}
+footer .social, footer .socialmedia {
+  margin-top: 0.5rem;
+}
+footer .social a, footer .socialmedia a {
+  margin: 0 0.5rem;
+  display: inline-block;
+}
+footer .social img, footer .socialmedia img {
+  vertical-align: middle;
+  width: 32px;
+  height: 32px;
+}
+
+/* Responsive (optional) */
+@media (max-width: 900px) {
+  header, main, footer {
+    width: 98%;
+  }
+  .hero article {
+    margin: 0 4px;
+    padding: 8px;
+  }
+}

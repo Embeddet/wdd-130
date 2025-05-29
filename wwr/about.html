@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>White Water Rafting | About Us</title>
+    <meta name="description" content="About White Water Rafting: our mission, history, and the adventure that awaits you.">
+    <meta name="author" content="Albright Edet">
+    <!-- Google Fonts: Example using Roboto and Merriweather -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700|Merriweather:400,700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles/rafting.css">
+</head>
+<body>
+    <header>
+        <nav aria-label="Main navigation">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="White Water Rafting Logo" class="logo">
+                </a>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" aria-current="page">About</a></li>
+                <li><a href="trips.html">Trips</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="hero">
+            <img src="images/hero.jpg" alt="Rafting Adventure" class="hero-img">
+            <h1>White Water Rafting</h1>
+            <article>
+                <img src="images/happy-client.jpg" alt="Happy Client" class="client-img">
+                <p>
+                    Our mission is to create unforgettable river adventures for everyone. We believe in fun, safety, and the thrill of the rapids. Join us for the ride of your life!
+                </p>
+            </article>
+        </div>
+        <section>
+            <h2>History</h2>
+            <p>
+                Since our founding, we've navigated the wildest rivers and made countless memories. Our team is passionate about sharing the excitement of white water rafting with adventurers of all ages.
+            </p>
+        </section>
+        <section>
+            <h2>Adventure Awaits You!</h2>
+            <img src="images/rafting1.jpg" alt="Rafting Adventure 1">
+            <img src="images/rafting2.jpg" alt="Rafting Adventure 2">
+            <img src="images/rafting3.jpg" alt="Rafting Adventure 3">
+            <img src="images/rafting4.jpg" alt="Rafting Adventure 4">
+            <img src="images/rafting5.jpg" alt="Rafting Adventure 5">
+        </section>
+    </main>
+    <footer>
+        <p id="footer-text">&copy; 2025 White Water Rafting | Albright Edet</p>
+        <div class="social">
+            <a href="https://facebook.com" target="_blank" rel="noopener">
+                <img src="images/facebook.png" alt="Facebook" width="32">
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener">
+                <img src="images/twitter.png" alt="Twitter" width="32">
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener">
+                <img src="images/instagram.jpg" alt="Instagram" width="32">
+            </a>
+        </div>
+        <script>
+            // Update the footer with the current year and time
+            function updateFooterTime() {
+                const now = new Date();
+                const year = now.getFullYear();
+                const time = now.toLocaleTimeString();
+                document.getElementById('footer-text').innerHTML =
+                    `&copy; ${year} White Water Rafting | Albright Edet | ${time}`;
+            }
+            updateFooterTime();
+            setInterval(updateFooterTime, 1000);
+        </script>
+    </footer>
+</body>
+</html>
