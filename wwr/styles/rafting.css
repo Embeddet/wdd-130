@@ -29,8 +29,13 @@ header, main, footer {
 
 /* Header and Navigation */
 header {
+  display: grid;
+  grid-template-columns: 160px 1fr; /* logo | nav */
+  align-items: center;
   background: #e9ecef;
   border-bottom: 2px solid #ccc;
+  padding: 0;
+  min-height: 90px;
 }
 nav {
   display: flex;
@@ -40,41 +45,42 @@ nav {
   padding: 0.5rem 1rem;
 }
 .nav-logo {
+  height: 100%;
   display: flex;
   align-items: center;
-  margin-right: 2rem;
+  justify-content: center;
 }
 .logo {
-  height: 40px;
+  height: 60px;
   width: auto;
   display: block;
 }
 nav ul {
-  flex: 1;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   list-style: none;
   margin: 0;
   padding: 0;
+  gap: 2rem;
   background: none;
+  height: 100%;
 }
 nav ul li {
-  margin-left: 2rem;
-}
-nav ul li:first-child {
-  margin-left: 0;
+  margin: 0;
 }
 nav ul li a,
 nav a {
   text-decoration: none;
   color: #222;
   font-weight: 600;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 1.2rem;
   border-radius: 4px;
+  background: transparent;
+  transition: background 0.2s;
 }
-nav ul li a[aria-current="page"] {
-  color: #0a197d;
+nav ul li a[aria-current="page"], nav ul li a:hover {
+  color: var(--primary-color);
   background: #fff;
 }
 
@@ -137,26 +143,94 @@ nav, p, section, article {
   box-shadow: 0 2px 8px rgba(0,0,0,0.10);
 }
 
+/* Adventures Section */
+.adventures-section {
+  margin: 32px 0;
+}
+
+.adventures-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.adventures-grid figure {
+  flex: 1 1 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+}
+
+.adventures-grid img {
+  width: 120px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.adventures-grid figcaption {
+  text-align: center;
+  font-size: 0.95rem;
+  color: #222;
+  margin-top: 4px;
+}
+
+/* History Section Grid Layout */
+.history-section {
+  margin: 32px 0;
+}
+.history-section h2 {
+  text-align: center;
+  margin-bottom: 16px;
+}
+.history-grid {
+  display: grid;
+  grid-template-columns: 1fr 180px 1fr;
+  gap: 24px;
+  align-items: center;
+  background: #fff;
+  padding: 16px;
+  border-radius: 8px;
+}
+.history-grid img {
+  width: 100%;
+  max-width: 180px;
+  border-radius: 8px;
+  display: block;
+  background: var(--primary-color);
+  padding: 8px;
+  box-sizing: border-box;
+}
+
 /* Footer */
 footer {
-  margin-top: 2rem;
-  border-top: 2px solid #ccc;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   background: #bfc9d1;
-  padding: 1rem 0 0.5rem 0;
-  position: relative;
+  border-top: 2px solid #ccc;
+  padding: 1rem 2rem 0.5rem 2rem;
+  margin-top: 2rem;
 }
-footer .social, footer .socialmedia {
-  margin-top: 0.5rem;
+footer p {
+  margin: 0;
 }
-footer .social a, footer .socialmedia a {
-  margin: 0 0.5rem;
-  display: inline-block;
+footer .social {
+  display: flex;
+  gap: 1rem;
+  margin-left: auto;
 }
-footer .social img, footer .socialmedia img {
-  vertical-align: middle;
+footer .social a {
+  text-decoration: none;
+}
+footer .social img {
   width: 32px;
   height: 32px;
+  vertical-align: middle;
 }
 
 /* Responsive (optional) */
@@ -164,8 +238,26 @@ footer .social img, footer .socialmedia img {
   header, main, footer {
     width: 98%;
   }
+  header {
+    grid-template-columns: 1fr;
+    text-align: center;
+    min-height: unset;
+  }
+  .nav-logo {
+    justify-content: center;
+    margin-bottom: 0.5rem;
+  }
+  nav ul {
+    justify-content: center;
+    gap: 1rem;
+  }
   .hero article {
     margin: 0 4px;
     padding: 8px;
+  }
+  .history-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    text-align: center;
   }
 }
