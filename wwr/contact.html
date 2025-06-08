@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>White Water Rafting | Contact Us</title>
+    <meta name="description" content="Contact White Water Rafting.">
+    <meta name="author" content="Albright Edet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700|Merriweather:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/rafting.css">
+</head>
+<body>
+    <header>
+        <nav aria-label="Main navigation">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="White Water Rafting Logo" class="logo">
+                </a>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="trips.html">Trips</a></li>
+                <li><a href="contact.html" aria-current="page">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="contact-info">
+            <h1>Contact Us</h1>
+            <div class="company-details">
+                <p><strong>Address:</strong> 1 Goshen Estate, Ogun state, Nigeria, RC 12345</p>
+                <p><strong>Phone:</strong> +2348030404312</p>
+                <p><strong>Email:</strong> <a href="mailto:albrightedet@gmail.com">albrightedet@gmail.com</a></p>
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3859.564477918032!2d3.4015311660827647!3d6.78546117221088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNsKwNDcnMDcuNiJOIDPCsDI0JzE0LjkiRQ!5e1!3m2!1sen!2sng!4v1749421269084!5m2!1sen!2sng"
+                        width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+        <section class="employee-profiles">
+            <h2>Meet Our Team</h2>
+            <div class="profiles-grid">
+                <figure>
+                    <img src="images/employee1.jpg" alt="Emily, Lead Guide">
+                    <figcaption>Emily - Lead Guide</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/employee2.jpg" alt="Carlos, Safety Instructor">
+                    <figcaption>Carlos - Safety Instructor</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/employee3.jpg" alt="Sophie, Reservation Specialist">
+                    <figcaption>Sophie - Reservation Specialist</figcaption>
+                </figure>
+            </div>
+        </section>
+        <section class="contact-form-section">
+            <h2>Send Us a Message</h2>
+            <form class="contact-form" action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <fieldset>
+                    <legend>Purpose of your message:</legend>
+                    <label>
+                        <input type="radio" name="purpose" value="General Inquiry" required>
+                        General Inquiry
+                    </label>
+                    <label>
+                        <input type="radio" name="purpose" value="Reservation Question">
+                        Reservation Question
+                    </label>
+                    <label>
+                        <input type="radio" name="purpose" value="Website Suggestion">
+                        Website Suggestion
+                    </label>
+                </fieldset>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <label class="checkbox-label">
+                    <input type="checkbox" name="subscribe">
+                    Please subscribe me to the monthly newsletter
+                </label>
+
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p id="footer-text">&copy; 2025 White Water Rafting | Albright Edet</p>
+        <div class="social">
+            <a href="https://facebook.com" target="_blank" rel="noopener">
+                <img src="images/facebook.png" alt="Facebook" width="32">
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener">
+                <img src="images/twitter.png" alt="Twitter" width="32">
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener">
+                <img src="images/instagram.jpg" alt="Instagram" width="32">
+            </a>
+        </div>
+        <script>
+            function updateFooterTime() {
+                const now = new Date();
+                const year = now.getFullYear();
+                const time = now.toLocaleTimeString();
+                document.getElementById('footer-text').innerHTML =
+                    `&copy; ${year} White Water Rafting | Albright Edet | ${time}`;
+            }
+            updateFooterTime();
+            setInterval(updateFooterTime, 1000);
+        </script>
+    </footer>
+</body>
+</html>
