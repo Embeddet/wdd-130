@@ -6,10 +6,13 @@
     <title>White Water Rafting | Contact Us</title>
     <meta name="description" content="Contact White Water Rafting.">
     <meta name="author" content="Albright Edet">
+    <!-- Google Fonts for site typography -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700|Merriweather:400,700&display=swap" rel="stylesheet">
+    <!-- Main site CSS -->
     <link rel="stylesheet" href="styles/rafting.css">
 </head>
 <body>
+    <!-- Header with logo and navigation -->
     <header>
         <nav aria-label="Main navigation">
             <div class="nav-logo">
@@ -26,6 +29,7 @@
         </nav>
     </header>
     <main>
+        <!-- Company contact information and map -->
         <section class="contact-info">
             <h1>Contact Us</h1>
             <div class="company-details">
@@ -33,12 +37,14 @@
                 <p><strong>Phone:</strong> +2348030404312</p>
                 <p><strong>Email:</strong> <a href="mailto:albrightedet@gmail.com">albrightedet@gmail.com</a></p>
                 <div class="map-container">
+                    <!-- Embedded Google Map -->
                     <iframe 
                         src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3859.564477918032!2d3.4015311660827647!3d6.78546117221088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNsKwNDcnMDcuNiJOIDPCsDI0JzE0LjkiRQ!5e1!3m2!1sen!2sng!4v1749421269084!5m2!1sen!2sng"
                         width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </section>
+        <!-- Employee profiles section -->
         <section class="employee-profiles">
             <h2>Meet Our Team</h2>
             <div class="profiles-grid">
@@ -56,15 +62,19 @@
                 </figure>
             </div>
         </section>
+        <!-- Contact form section -->
         <section class="contact-form-section">
             <h2>Send Us a Message</h2>
             <form class="contact-form" action="#" method="post">
+                <!-- User name input -->
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
 
+                <!-- User email input -->
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
 
+                <!-- Purpose radio buttons -->
                 <fieldset>
                     <legend>Purpose of your message:</legend>
                     <label>
@@ -81,18 +91,22 @@
                     </label>
                 </fieldset>
 
+                <!-- Message textarea -->
                 <label for="message">Message:</label>
                 <textarea id="message" name="message" rows="5" required></textarea>
 
+                <!-- Newsletter subscription checkbox -->
                 <label class="checkbox-label">
                     <input type="checkbox" name="subscribe">
                     Please subscribe me to the monthly newsletter
                 </label>
 
+                <!-- Submit button -->
                 <button type="submit" class="submit-btn">Send Message</button>
             </form>
         </section>
     </main>
+    <!-- Footer with copyright and social links -->
     <footer>
         <p id="footer-text">&copy; 2025 White Water Rafting | Albright Edet</p>
         <div class="social">
@@ -106,6 +120,7 @@
                 <img src="images/instagram.jpg" alt="Instagram" width="32">
             </a>
         </div>
+        <!-- Script to update footer year and time -->
         <script>
             function updateFooterTime() {
                 const now = new Date();
