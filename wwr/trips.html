@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>White Water Rafting | Trips</title>
+    <meta name="description" content="Explore our exciting white water rafting trips, adventures, and packages. Find the perfect adventure for you and your group!">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700|Merriweather:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/rafting.css">
+</head>
+<body>
+    <header>
+        <nav aria-label="Main navigation">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="White Water Rafting Logo" class="logo">
+                </a>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="trips.html" aria-current="page">Trips</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Call to Action -->
+        <section class="cta-section">
+            <h1>Ready for Adventure?</h1>
+            <p>Contact us to book your unforgettable rafting experience!</p>
+            <a href="contact.html" class="cta-btn">Contact Us</a>
+        </section>
+
+        <!-- Trip Descriptions Grid -->
+        <section class="trips-grid-section">
+            <h2>Our Featured Trips</h2>
+            <div class="trips-grid">
+                <div class="trip-card">
+                    <img src="images/rafting1.jpg" alt="Rapid Rush Adventure">
+                    <h3>Rapid Rush Adventure</h3>
+                    <p>Experience the thrill of class IV rapids on this half-day adventure. Perfect for adrenaline seekers!</p>
+                </div>
+                <div class="trip-card">
+                    <img src="images/rafting2.jpg" alt="Family Float">
+                    <h3>Family Float</h3>
+                    <p>A gentle, scenic trip ideal for families and beginners. Enjoy the beauty of the river at a relaxed pace.</p>
+                </div>
+                <div class="trip-card">
+                    <img src="images/rafting3.jpg" alt="Full Day Expedition">
+                    <h3>Full Day Expedition</h3>
+                    <p>Take on the river for a full day, including lunch and stops at breathtaking viewpoints along the way.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trips Table -->
+        <section class="trips-table-section">
+            <h2>All Available Trips</h2>
+            <div class="table-responsive">
+                <table class="trips-table">
+                    <thead>
+                        <tr>
+                            <th>Trip Name</th>
+                            <th>Duration</th>
+                            <th>Difficulty</th>
+                            <th>Price</th>
+                            <th>Includes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Rapid Rush Adventure</td>
+                            <td>Half Day</td>
+                            <td>Advanced</td>
+                            <td>$120</td>
+                            <td>Guide, Gear, Snacks</td>
+                        </tr>
+                        <tr>
+                            <td>Family Float</td>
+                            <td>2 Hours</td>
+                            <td>Beginner</td>
+                            <td>$80</td>
+                            <td>Guide, Gear</td>
+                        </tr>
+                        <tr>
+                            <td>Full Day Expedition</td>
+                            <td>Full Day</td>
+                            <td>Intermediate</td>
+                            <td>$200</td>
+                            <td>Guide, Gear, Lunch</td>
+                        </tr>
+                        <tr>
+                            <td>Sunset Paddle</td>
+                            <td>Evening</td>
+                            <td>All Levels</td>
+                            <td>$90</td>
+                            <td>Guide, Gear, Drinks</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p id="footer-text">&copy; 2025 White Water Rafting | Albright Edet</p>
+        <div class="social">
+            <a href="https://facebook.com" target="_blank" rel="noopener">
+                <img src="images/facebook.png" alt="Facebook" width="32">
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener">
+                <img src="images/twitter.png" alt="Twitter" width="32">
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener">
+                <img src="images/instagram.jpg" alt="Instagram" width="32">
+            </a>
+        </div>
+        <!-- Wireframe link for this page only -->
+        <div class="wireframe-link">
+            <a href="https://app.moqups.com/xTcuC7Of4IZOihKARSR2D3knvwq0sTGB/view/page/ad64222d5" target="_blank">View Trips Page Wireframe</a>
+        </div>
+        <script>
+            function updateFooterTime() {
+                const now = new Date();
+                const year = now.getFullYear();
+                const time = now.toLocaleTimeString();
+                document.getElementById('footer-text').innerHTML =
+                    `&copy; ${year} White Water Rafting | Albright Edet | ${time}`;
+            }
+            updateFooterTime();
+            setInterval(updateFooterTime, 1000);
+        </script>
+    </footer>
+</body>
+</html>
